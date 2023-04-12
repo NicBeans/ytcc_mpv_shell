@@ -16,5 +16,6 @@ echo
 read -p "Enter the number of the video you want to play: " video_number
 
 # Get the video URL and play it using mpv (or another video player of your choice)
-video_url=$(ytcc list --since "$three_days_ago" --order-by publish_date desc --attributes url | sed -n "${video_number}p" | tr -d '[:blank:]')
-mpv "$video_url"
+# video_url=$(ytcc list --since "$three_days_ago" --order-by publish_date desc --attributes url | sed -n "${video_number}p" | tr -d '[:blank:]')
+# mpv "$video_url"
+ytcc play $video_number
